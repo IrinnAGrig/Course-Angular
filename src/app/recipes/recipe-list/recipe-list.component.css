@@ -1,0 +1,5 @@
+.row-list{
+  margin-top: 40px;
+  border: 2px solid var(--bs-body-color);
+  padding: 20px;
+}

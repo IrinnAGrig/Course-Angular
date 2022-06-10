@@ -1,0 +1,19 @@
+<a class="list-group-item clearfix" style="width:100%;cursor:pointer;"
+[routerLink]="[index]" routerLinkActive="active">
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <span class="pull-right col-sm-6">
+          <img
+            [src]="recipe?.imagePath"
+            alt="{{recipe?.name}}"
+            class="img-fluid image-size"
+            >
+          </span>
+      </div>
+      <div class="col">
+        <h4 CLASS="list-group-item-heading">{{recipe?.name}}</h4>
+      </div>
+    </div>
+  </div>
+</a>

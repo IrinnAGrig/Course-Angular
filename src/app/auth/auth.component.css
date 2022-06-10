@@ -1,0 +1,17 @@
+hr{
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.8) ;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.8);
+  margin-top:10px;
+  color:white;
+}
+.authenticate{
+  background-image: linear-gradient(to bottom right,white, grey);
+  border: 3px solid grey;
+  border-radius: 4px;
+  padding: 50px;
+  width: 50%;
+  margin: 5% auto;
+}
+.space{
+  padding:5px;
+}

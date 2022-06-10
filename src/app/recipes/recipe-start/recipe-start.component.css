@@ -1,0 +1,5 @@
+.unselectedRecipe{
+  background-color: var(--bs-body-color);
+  color: white;
+  margin-top: 10%;
+}

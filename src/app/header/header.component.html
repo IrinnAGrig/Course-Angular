@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<nav class="navbar-dark bg-dark" style="text-align: center;">
+  <div class="navbar navbar-expand-lg body-navbar" >
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Recipe Book</a>
+    </div>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li routerLinkAcrive="active" *ngIf="isAuthenticated" class="nav-item">
+        <a  class="nav-link" routerLink="recipes" >Recipes</a>
+      </li>
+      <li routerLinkAcrive="active"  class="nav-item">
+        <a class="nav-link" routerLink="shopping-list">Shoping List</a>
+      </li>
+      <li routerLinkAcrive="active" *ngIf="!isAuthenticated" class="nav-item">
+        <a class="nav-link" routerLink="auth">Authenticate</a>
+      </li>
+
+    </ul>
+    <ul class="navbar-nav navbar-header d-flex" style="margin-left:20px;">
+      <li *ngIf="isAuthenticated" class="nav-item dropdown d-flex" style="color:white;">
+        <a style="cursor:pointer;" (click)="onLogout()" >Logout</a>
+      </li>
+      <li  *ngIf="isAuthenticated" class="nav-item dropdown d-flex">
+        <div class="row">
+          <div class="col-xs-12">
+            <button
+              style="margin-left:20px;"
+              type="submit"
+              class="btn btn-outline-light"
+              (click)="onSaveData()"
+            >Save Data</button>
+            <button
+              style="margin-left:20px;"
+              type="button"
+              class="btn btn-outline-light"
+              (click)="onFetchData()"
+            >Fetch Data</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+<!--    <ul class="nav justify-content-end" style="float:right;">&ndash;&gt;-->
+<!--      <li class="dropdown" appDropdown #r="appDropdown">-->
+<!--        <a  class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>-->
+<!--        <ul class="dropdown-menu" [ngClass]="{'show':r.isOpen}">-->
+<!--          <li><a style="margin-left:20px;"-->
+<!--                 type="submit"-->
+<!--                 class="btn btn-outline-light"-->
+<!--                 (click)="onSaveData()">Save Data</a></li>-->
+<!--          <li><a style="margin-left:20px;"-->
+<!--                 type="button"-->
+<!--                 class="btn btn-outline-light"-->
+<!--                 (click)="onFetchData()">Fetch Data</a></li>-->
+<!--        </ul>-->
+<!--      </li>-->
+<!--    </ul>-->
+
+  </div>
+</nav>
+
+
+

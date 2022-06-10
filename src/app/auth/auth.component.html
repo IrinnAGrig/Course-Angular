@@ -1,0 +1,69 @@
+<div class="row">
+  <h1><strong>Let's authenticate</strong></h1>
+  <hr>
+  <div class="col-xs-12 col-md-6 col-md-offset-3 authenticate">
+<!--    <div class="alert alert-danger" *ngIf="error">-->
+<!--      <p>{{ error }}</p>-->
+<!--    </div>-->
+<!--    <app-alert -->
+<!--      [message]="error" -->
+<!--      *ngIf="error" -->
+<!--      (close)="onHandleError()">-->
+<!--    </app-alert>-->
+    <ng-template appPlaceholder></ng-template>
+    <div *ngIf="isLoging" style="text-align: center;">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoging">
+      <h1>{{isLoginMode ? 'Login': 'Sign Up'}}</h1>
+      <p>Enter your credentials!</p>
+      <br>
+      <div class="form-group space">
+        <div class="row">
+          <div class="col-xl-2">
+            <label for="email">E-Mail</label>
+          </div>
+          <div class="col-xl-10">
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              ngModel
+              name="email"
+              required
+              email
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group space">
+        <div class="row">
+          <div class="col-xl-2">
+            <label for="password">Password</label>
+          </div>
+          <div class="col-xl-10">
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              ngModel
+              name="password"
+              required
+              minlength="6"
+              maxlength="20"
+            />
+          </div>
+        </div>
+      </div>
+      <div style="margin:20px;">
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!authForm.valid"
+        >{{isLoginMode ? 'Login': 'Sign Up'}}</button> |
+        <button class="btn btn-primary" (click)="onSwitchMode()">
+          Switch to {{isLoginMode ? 'Sign Up': 'Login'}}</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+/*.container{*/
+/*  width:80% !important;*/
+/*  text-align: center !important;*/
+/*  margin:auto !important;*/
+/*}*/
+.body-action{
+  width: 100%;
+  margin: 50px auto ;
+}
+footer{
+  background-color: var(--bs-body-color);
+  color: white;
+  padding: 7% 15%;
+  margin-bottom: 5%;
+}

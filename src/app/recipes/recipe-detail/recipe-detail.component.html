@@ -1,0 +1,95 @@
+<div class="recipeItem"  >
+  <div class="title">
+    <div class="row" >
+
+      <div class="row col-xl-6 card-title card">
+          <h3>{{ recipe?.name }}</h3>
+      </div>
+
+      <div class="col-xl-6 card" style="magin-top: 20px;" appDropdown #r="appDropdown">
+        <button type="button" class="btn btn-primary " data-toggle="dropdown" >
+          Manage
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu" [ngClass]="{'show':r.isOpen}" >
+          <li><a class="dropdown-item" style="cursor: pointer"
+                 type="button"
+                 (click)="onAddToShoppingList()"
+          >To Shopping List</a></li>
+          <li><a class="dropdown-item" type="button"
+                 style="cursor: pointer;"
+                 (click)="onEditRecipe()">Edit Recipe</a></li>
+          <li><a class="dropdown-item" type="button"
+                 (click)="onDeleteRecipe()" style="cursor: pointer;">Delete Recipe</a></li>
+        </ul>
+<!--        <button-->
+<!--          class="btn btn-success"-->
+<!--          type="button"-->
+<!--          (click)="onAddToShoppingList()" style="cursor:pointer;"-->
+<!--        >To Shopping List</button>-->
+<!--        <button-->
+<!--          class="btn btn-primary"-->
+<!--          type="button"-->
+<!--          style="cursor: pointer;"-->
+<!--          (click)="onEditRecipe()"-->
+<!--        >Edit Recipe</button>-->
+<!--        <button-->
+<!--          class="btn btn-danger"-->
+<!--          type="button"-->
+<!--        (click)="onDeleteRecipe()">Delete Recipe</button>-->
+      </div>
+    </div>
+    <li class="nav-item dropdown d-flex">
+<!--      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--        Manage Recipe-->
+<!--      </a>-->
+<!--      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--        <li><a class="dropdown-item" (click)="onAddToShoppingList()" style="cursor:pointer;">To Shopping List</a></li>-->
+<!--        <li><a class="dropdown-item" style="cursor:pointer;">Edit Recipe</a></li>-->
+<!--        <li><hr class="dropdown-divider"></li>-->
+<!--        <li><a class="dropdown-item" style="cursor:pointer;">Delete Recipe</a></li>-->
+<!--      </ul>-->
+
+
+<!--      <div class="dropdown" style="margin:20px;width: 80%; float:right;right: 0;left: auto;">-->
+<!--        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--          Manage Recipe-->
+<!--        </button>-->
+<!--        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--          <li><a class="dropdown-item" (click)="onAddToShoppingList()">To Shopping List</a></li>-->
+<!--          <li><a class="dropdown-item" href="#">Edit Recipe</a></li>-->
+<!--          <li><a class="dropdown-item" href="#">Delete Recipe</a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+    </li>
+  </div>
+  <div class="row ">
+    <div class="col-xs-12">
+      <img
+        [src]="recipe.imagePath"
+        alt="{{ recipe.name }}"
+        style="width: 80%">
+    </div>
+  </div>
+  <div class="row" style="margin:auto;">
+    <div class="col-xs-12">
+      <p class="description">Description:
+      {{ recipe.description }}
+    </p>
+    </div>
+  </div>
+  <div class="ingredient-list">
+    <div>
+      <H3 style="size:2rem;">Ingredients list</H3>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-group">
+          <li class="list-group-item"
+          *ngFor="let ingredient of recipe.ingredients ">
+            {{ingredient.name}} - {{ingredient.amount}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

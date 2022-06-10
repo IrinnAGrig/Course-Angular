@@ -1,0 +1,19 @@
+hr{
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.8) ;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.8);
+  margin-top:10px;
+  color:white;
+}
+
+.shopping-edit{
+  text-align: center;
+  padding: 50px;
+  margin:auto;
+  border: 1px solid grey;
+}
+@media only screen and (max-width: 1000px) {
+  .shopping-edit{
+    margin-top:20px;
+  }
+}
+

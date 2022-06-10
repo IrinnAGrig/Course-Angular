@@ -1,0 +1,25 @@
+.recipeItem{
+  padding:40px;
+  margin-top:40px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.8) ;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.8);
+
+}
+img{
+  margin-top: 20px;
+  width: 100%;
+}
+.ingredient-list{
+  width:100%;
+  background-color: black;
+  color:white;
+  margin:10px auto ;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.description{
+    padding: 10px;
+}
+.card-manage{
+  float: right;
+}
